@@ -1,5 +1,3 @@
-*.DS_Store
-
 functions/keys/
 functions/lib/
 functions/node_modules/
