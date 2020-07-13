@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+//
+// • no more MyPageContainer MyPageSection MyDivAbsolute
+// • MyContainer or MyDivContainer is the one that will handle all values to
+// layout an entire page or section
+// • MyGrid ? Or Make MyContainer accept a Grid attribute ?
+//
+// -----------------------------------------------------------------------------
+
+/**
+ * Documentation
+ * MyDivContainer
+ *
+ * sizeOptions:
+ * - fullBrowserWindow: 100% width, 100vh height.
+ * - fullScreen ParentFullScreen FullScreenParent: 100% width, 100% height.
+ * - expand: width and height is set depending on children content size.
+ * - pixelFixed: pass fixed Width and height values. Pixels.
+ * - percentFixed: pass fixed Width and height values. Percent.
+ * Defaults to width 100% and height 100%
+ *
+ * margin: Defaults to 0.
+ * padding: Defaults to 0.
+ *
+ * Absolute?
+ * Defaults to FALSE
+ *
+ * Content Alignment thru the X and Y axis:
+ * display: "flex"
+ * flexDirection
+ * justifyContent
+ * alignItems
+ *
+ * Div Dimensions:
+ *
+ * min & max width & height it can be resized to
+ * Defaults to NO min and NO max
+ *
+ * min & max width & height it can be visible
+ * Defaults to NO min and NO max
+ *
+ * responsive
+ * Defaults to TRUE
+ * it resizes and fixes its size
+ * if set to false, it will always keep its width and height no matter the device
+ */
+
+// -----------------------------------------------------------------------------
+/*
+
+MyContainer
+Automatically or by default it is set to 100% width and height to its parent.
+
+<MyContainer>
+    <MyGrid>
+        <MyRow>
+            <MyColumn>
+            </MyColumn>
+        </MyRow>
+    </MyGrid>
+</MyContainer>
+
+<MyContainer>
+    <MyContainer grid>
+        <MyContainer row>
+            <MyContainer column>
+            </MyContainer>
+        </MyContainer>
+    </MyContainer>
+</MyContainer>
+
+<MyContainer>
+    <MyContainer role="grid">
+        <MyContainer role="row">
+            <MyContainer role="column">
+            </MyContainer>
+        </MyContainer>
+    </MyContainer>
+</MyContainer>
+
+<MyContainer sizeOption="fixed">
+</MyContainer>
+
+*/
+// -----------------------------------------------------------------------------
+/*
+
+x="" y=""
+
+display: "flex";
+flexDirection: "column" // default, or "row"
+justifyContent
+alignItems
+
+*/
