@@ -1,3 +1,5 @@
+*.DS_Store
+
 functions/keys/
 functions/lib/
 functions/node_modules/
@@ -5,6 +7,7 @@ functions/src/examples
 functions/service-account.json
 
 node_modules/
+public/
 
 src/actions/app_starter/Chat
 src/actions/app_starter/Contact
@@ -54,21 +57,21 @@ src/containers/examples/components/semanticUI
 src/containers/examples/components/wedevlopUI/animated
 src/containers/examples/components/wedevlopUI/FileUpload
 src/containers/examples/components/wedevlopUI/MyForm
-src/containers/examples/components/css
-src/containers/examples/components/firebaseAuth
-src/containers/examples/components/flexbox
-src/containers/examples/components/grid
-src/containers/examples/components/layout
-src/containers/examples/components/lazyload
-src/containers/examples/components/localization
-src/containers/examples/components/notifications
-src/containers/examples/components/pagination
-src/containers/examples/components/react
-src/containers/examples/components/redux-form
-src/containers/examples/components/stripe
-src/containers/examples/components/FileUpload.js
-src/containers/examples/components/README-Template.md
-src/containers/examples/components/TestData.js
+src/containers/components/css
+src/containers/components/firebaseAuth
+src/containers/components/flexbox
+src/containers/components/grid
+src/containers/components/layout
+src/containers/components/lazyload
+src/containers/components/localization
+src/containers/components/notifications
+src/containers/components/pagination
+src/containers/components/react
+src/containers/components/redux-form
+src/containers/components/stripe
+src/containers/components/FileUpload.js
+src/containers/components/README-Template.md
+src/containers/components/TestData.js
 
 src/data
 src/db-data
