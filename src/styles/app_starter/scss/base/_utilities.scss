@@ -1,0 +1,265 @@
+// -----------------------------------------------------------------------------
+// DISABLE ANIMATIONS
+// -----------------------------------------------------------------------------
+
+.appstarter-u-no-transitions {
+  -o-transition-property: none !important;
+  -moz-transition-property: none !important;
+  -ms-transition-property: none !important;
+  -webkit-transition-property: none !important;
+  transition-property: none !important;
+  //
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+.appstarter-u-no-transforms {
+  -o-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
+}
+
+.appstarter-u-no-animations {
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -o-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+}
+
+// -----------------------------------------------------------------------------
+// DISABLE ELEMENTS
+// -----------------------------------------------------------------------------
+
+.appstarter-u-display-none {
+  display: none !important;
+}
+
+.appstarter-u-disabled {
+  pointer-events: none !important;
+  opacity: 0.4 !important;
+}
+
+// -----------------------------------------------------------------------------
+// TEXT CENTERING
+// -----------------------------------------------------------------------------
+
+.appstarter-u-center-text {
+  text-align: center !important;
+}
+
+// -----------------------------------------------------------------------------
+// MARGINS
+// -----------------------------------------------------------------------------
+
+.appstarter-u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+.appstarter-u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.appstarter-u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 5rem !important;
+  }
+}
+
+.appstarter-u-margin-top-big {
+  margin-top: 8rem !important;
+}
+.appstarter-u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
+// -----------------------------------------------------------------------------
+// MARGIN BY SIDE
+// -----------------------------------------------------------------------------
+
+.appstarter-u-margin-top-05rem {
+  margin-top: 0.5rem !important;
+}
+
+.appstarter-u-margin-top-1rem {
+  margin-top: 1rem !important;
+}
+
+.appstarter-u-margin-top-2rem {
+  margin-top: 2rem !important;
+}
+
+.appstarter-u-margin-top-3rem {
+  margin-top: 3rem !important;
+}
+
+.appstarter-u-margin-top-4rem {
+  margin-top: 4rem !important;
+}
+
+.appstarter-u-margin-top-5rem {
+  margin-top: 5rem !important;
+}
+
+.appstarter-u-margin-bottom-05rem {
+  margin-bottom: 0.5rem !important;
+}
+
+.appstarter-u-margin-bottom-1rem {
+  margin-bottom: 1rem !important;
+}
+
+.appstarter-u-margin-bottom-2rem {
+  margin-bottom: 2rem !important;
+}
+
+.appstarter-u-margin-bottom-3rem {
+  margin-bottom: 3rem !important;
+}
+
+.appstarter-u-margin-bottom-4rem {
+  margin-bottom: 4rem !important;
+}
+
+.appstarter-u-margin-bottom-5rem {
+  margin-bottom: 5rem !important;
+}
+
+.appstarter-u-margin-right-05rem {
+  margin-right: 0.5rem !important;
+}
+
+.appstarter-u-margin-right-1rem {
+  margin-right: 1rem !important;
+}
+
+.appstarter-u-margin-right-2rem {
+  margin-right: 2rem !important;
+}
+
+.appstarter-u-margin-right-3rem {
+  margin-right: 3rem !important;
+}
+
+.appstarter-u-margin-right-4rem {
+  margin-right: 4rem !important;
+}
+
+.appstarter-u-margin-right-5rem {
+  margin-right: 5rem !important;
+}
+
+.appstarter-u-margin-left-05rem {
+  margin-left: 0.5rem !important;
+}
+
+.appstarter-u-margin-left-1rem {
+  margin-left: 1rem !important;
+}
+
+.appstarter-u-margin-left-2rem {
+  margin-left: 2rem !important;
+}
+
+.appstarter-u-margin-left-3rem {
+  margin-left: 3rem !important;
+}
+
+.appstarter-u-margin-left-4rem {
+  margin-left: 4rem !important;
+}
+
+.appstarter-u-margin-left-5rem {
+  margin-left: 5rem !important;
+}
+
+// -----------------------------------------------------------------------------
+// TEST BORDERS
+// -----------------------------------------------------------------------------
+
+.appstarter-u-testborder-black-05rem {
+  border-style: solid;
+  border-color: black;
+  border-width: 0.5rem !important;
+}
+.appstarter-u-testborder-white-05rem {
+  border-style: solid;
+  border-color: white;
+  border-width: 0.5rem !important;
+}
+.appstarter-u-testborder-red-05rem {
+  border-style: solid;
+  border-color: red;
+  border-width: 0.5rem !important;
+}
+@mixin app-u-testborder-red-05rem {
+  border-style: solid !important;
+  border-color: red !important;
+  border-width: 0.5rem !important;
+}
+.appstarter-u-testborder-blue-05rem {
+  border-style: solid;
+  border-color: blue;
+  border-width: 0.5rem !important;
+}
+.appstarter-u-testborder-green-05rem {
+  border-style: solid;
+  border-color: green;
+  border-width: 0.5rem !important;
+}
+.appstarter-u-testborder-orange-05rem {
+  border-style: solid;
+  border-color: orange;
+  border-width: 0.5rem !important;
+}
+.appstarter-u-testborder-purple-05rem {
+  border-style: solid;
+  border-color: purple;
+  border-width: 0.5rem !important;
+}
+
+.appstarter-u-testborder-black-1rem {
+  border-style: solid;
+  border-color: black;
+  border-width: 1rem !important;
+}
+.appstarter-u-testborder-white-1rem {
+  border-style: solid;
+  border-color: white;
+  border-width: 1rem !important;
+}
+.appstarter-u-testborder-red-1rem {
+  border-style: solid;
+  border-color: red;
+  border-width: 1rem !important;
+}
+.appstarter-u-testborder-blue-1rem {
+  border-style: solid;
+  border-color: blue;
+  border-width: 1rem !important;
+}
+.appstarter-u-testborder-green-1rem {
+  border-style: solid;
+  border-color: green;
+  border-width: 1rem !important;
+}
+.appstarter-u-testborder-orange-1rem {
+  border-style: solid;
+  border-color: orange;
+  border-width: 1rem !important;
+}
+.appstarter-u-testborder-purple-1rem {
+  border-style: solid;
+  border-color: purple;
+  border-width: 1rem !important;
+}

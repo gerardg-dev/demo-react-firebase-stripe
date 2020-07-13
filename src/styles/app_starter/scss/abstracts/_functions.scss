@@ -1,0 +1,12 @@
+// @function app-func($base, $exponent) {
+//   $result: 1;
+//   @for $_ from 1 through $exponent {
+//     $result: $result * $base;
+//   }
+//   @return $result;
+// }
+//
+// .appstarter-class {
+//   float: left;
+//   margin-left: pow(4, 3) * 1px;
+// }
