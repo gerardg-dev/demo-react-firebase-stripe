@@ -1,4 +1,4 @@
-// A way for mock users for test purposes
+// A way for creating fake users for test purposes
 
 // If this doesnt work the first time, probably because you have not verified
 // your phone number with the Stripe API

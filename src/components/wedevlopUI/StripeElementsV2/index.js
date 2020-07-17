@@ -112,11 +112,6 @@ const StripeElements = props => {
     let cardExpiry;
     let cardCvc;
     if (formN === 2 || formN === 3) {
-      // var cardNumber = elements.create("cardNumber", {
-      //   style: elementStyles,
-      //   classes: elementClasses
-      // });
-
       // CARD NUMBER
 
       cardNumber = elements.create("cardNumber", stripeElementsStyle);

@@ -1,12 +1,3 @@
-// https://stripe.dev/elements-examples/
-// // Examples JS and CSS
-// https://github.com/stripe/elements-examples
-// // Examples HTML
-// https://github.com/stripe/elements-examples/blob/master/index.html
-
-// formN "1" is only great with inputStyleN "1"
-// add if cases to formN "1" to make it work with the other inputStyleN's
-
 import React from "react";
 
 import Form1 from "./Form1";
@@ -19,12 +10,6 @@ import defaultStyles from "../styles/defaultStyles";
 import defaultClassNames from "../styles/defaultClassNames";
 
 import placeholderCSS from "../styles/css/placeholder.css";
-
-// stripeElements element id's
-// payment-form
-// card-element
-// card-errors
-// card
 
 const Form = props => {
   const style = { ...defaultStyles.style, ...props.style };
@@ -75,10 +60,6 @@ const Form = props => {
     citySamplePlaceholder,
     stateSamplePlaceholder,
     zipSamplePlaceholder
-    //
-    // verticalInputSeparatorHeight,
-    // horizontalInputSeparatorWidth,
-    // hrStyle
   } = props;
 
   let baseInputStyle;
@@ -296,6 +277,14 @@ const Form = props => {
           //
           baseInputStyle={baseInputStyle}
           showInputLabel={showInputLabel}
+          //
+          nameLabel={nameLabel}
+          emailLabel={emailLabel}
+          phoneLabel={phoneLabel}
+          cardLabel={cardLabel}
+          cardNumberLabel={cardNumberLabel}
+          cardExpiryLabel={cardExpiryLabel}
+          cardCVCLabel={cardCVCLabel}
           //
           namePlaceholder={namePlaceholder}
           emailPlaceholder={emailPlaceholder}

@@ -1,2 +1,2 @@
-import App from "./app_starter/App";
+import App from "./app_demos/App";
 export default App;

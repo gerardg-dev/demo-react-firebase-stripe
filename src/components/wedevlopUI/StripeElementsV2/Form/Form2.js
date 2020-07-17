@@ -26,7 +26,7 @@ const Form2 = props => {
 
   return (
     <div style={{ width: "100%" }}>
-      <div stlye={{ display: "flex", flexDirection: "column" }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {showInputLabel ? (
           <label
             style={{

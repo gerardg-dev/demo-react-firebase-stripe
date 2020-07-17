@@ -6,7 +6,6 @@ import { attachSource } from "./sources";
 
 /**
 Gets a user's charge history
-limit arg, to set the limit of charge history records you want to retrieve
 */
 export const getUserCharges = async (uid: string, limit?: number) => {
   const customer = await getCustomer(uid);
@@ -18,9 +17,7 @@ export const getUserCharges = async (uid: string, limit?: number) => {
 };
 
 /**
-Creates a charge for a specific amount in cents. If $25.00 USD, amount = 2500.
-idempotency_key, this key will ensure that if this API is called more than once
-it will be executed once.
+Creates a charge for a specific amount
 */
 export const createCharge = async (
   uid: string,
@@ -39,6 +36,7 @@ export const createCharge = async (
       source,
       currency: "usd"
     },
+
     { idempotency_key }
   );
 };

@@ -1,3 +1,6 @@
+// IMPORTANT, on this project folder, not on /functions, use terminal and run
+// firebase functions:config:set stripe.webhooks_signature="your_signing_secret"
+
 import * as functions from "firebase-functions";
 import { db, stripe } from "../config";
 

@@ -1,5 +1,3 @@
-// STRIPE - PAYMENTS ***********************************************************
-
 export { stripeAttachSource } from "./stripe/sources";
 
 export { stripeCreateCharge, stripeGetCharges } from "./stripe/charges";

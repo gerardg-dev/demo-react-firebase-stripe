@@ -4,6 +4,14 @@ const Form3 = props => {
   const { style, addStyle, className, addClassName } = props;
   const { baseInputStyle, showInputLabel } = props;
   const {
+    nameLabel,
+    emailLabel,
+    phoneLabel,
+    cardLabel,
+    cardNumberLabel,
+    cardExpiryLabel,
+    cardCVCLabel,
+    //
     namePlaceholder,
     emailPlaceholder,
     phonePlaceholder,
@@ -15,14 +23,30 @@ const Form3 = props => {
 
   return (
     <div style={{ width: "100%" }}>
-      <input
-        required
-        id="stripe-card-name"
-        style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
-        className={`${className.input} ${addClassName.input}`}
-        placeholder={showInputLabel ? nameSamplePlaceholder : namePlaceholder}
-        type="text"
-      />
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        {showInputLabel ? (
+          <label
+            style={{
+              ...style.inputLabel,
+              ...{ width: "100%" },
+              ...addStyle.inputLabel
+            }}
+            className={`${className.inputLabel} ${addClassName.inputLabel}`}
+          >
+            {nameLabel}
+          </label>
+        ) : (
+          ""
+        )}
+        <input
+          required
+          id="stripe-card-name"
+          style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
+          className={`${className.input} ${addClassName.input}`}
+          placeholder={showInputLabel ? nameSamplePlaceholder : namePlaceholder}
+          type="text"
+        />
+      </div>
 
       <div
         style={{
@@ -40,21 +64,39 @@ const Form3 = props => {
           justifyContent: "center"
         }}
       >
-        <input
-          required
-          id="stripe-card-email"
-          style={{
-            ...baseInputStyle,
-            ...style.input,
-            ...{ width: "50%" },
-            ...addStyle.input
-          }}
-          className={`${className.input} ${addClassName.input}`}
-          placeholder={
-            showInputLabel ? emailSamplePlaceholder : emailPlaceholder
-          }
-          type="email"
-        />
+        <div
+          style={{ display: "flex", flexDirection: "column", width: "100%" }}
+        >
+          {showInputLabel ? (
+            <label
+              style={{
+                ...style.inputLabel,
+                ...{ width: "100%" },
+                ...addStyle.inputLabel
+              }}
+              className={`${className.inputLabel} ${addClassName.inputLabel}`}
+            >
+              {emailLabel}
+            </label>
+          ) : (
+            ""
+          )}
+          <input
+            required
+            id="stripe-card-email"
+            style={{
+              ...baseInputStyle,
+              ...style.input,
+              ...{ width: "100%" },
+              ...addStyle.input
+            }}
+            className={`${className.input} ${addClassName.input}`}
+            placeholder={
+              showInputLabel ? emailSamplePlaceholder : emailPlaceholder
+            }
+            type="email"
+          />
+        </div>
 
         <div
           style={{
@@ -64,32 +106,67 @@ const Form3 = props => {
           className={`${className.horizontalInputSeparatorWidth} ${addClassName.horizontalInputSeparatorWidth}`}
         />
 
-        <input
-          required
-          id="stripe-card-phone"
-          style={{
-            ...baseInputStyle,
-            ...style.input,
-            ...{ width: "50%" },
-            ...addStyle.input
-          }}
-          className={`${className.input} ${addClassName.input}`}
-          placeholder={
-            showInputLabel ? phoneSamplePlaceholder : phonePlaceholder
-          }
-          type="number"
-        />
+        <div
+          style={{ display: "flex", flexDirection: "column", width: "100%" }}
+        >
+          {showInputLabel ? (
+            <label
+              style={{
+                ...style.inputLabel,
+                ...{ width: "100%" },
+                ...addStyle.inputLabel
+              }}
+              className={`${className.inputLabel} ${addClassName.inputLabel}`}
+            >
+              {phoneLabel}
+            </label>
+          ) : (
+            ""
+          )}
+          <input
+            required
+            id="stripe-card-phone"
+            style={{
+              ...baseInputStyle,
+              ...style.input,
+              ...{ width: "100%" },
+              ...addStyle.input
+            }}
+            className={`${className.input} ${addClassName.input}`}
+            placeholder={
+              showInputLabel ? phoneSamplePlaceholder : phonePlaceholder
+            }
+            type="number"
+          />
+        </div>
       </div>
 
       <br />
 
-      <div
-        id="stripe-card-number"
-        style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
-        className={`${className.input} ${addClassName.input}`}
-      >
-        {/**/}
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        {showInputLabel ? (
+          <label
+            style={{
+              ...style.inputLabel,
+              ...{ width: "100%" },
+              ...addStyle.inputLabel
+            }}
+            className={`${className.inputLabel} ${addClassName.inputLabel}`}
+          >
+            {cardNumberLabel}
+          </label>
+        ) : (
+          ""
+        )}
+        <div
+          id="stripe-card-number"
+          style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
+          className={`${className.input} ${addClassName.input}`}
+        >
+          {/**/}
+        </div>
       </div>
+
       <div
         id="stripe-card-number-errors"
         role="alert"
@@ -115,12 +192,28 @@ const Form3 = props => {
             width: "50%"
           }}
         >
-          <div
-            id="stripe-card-expiry"
-            style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
-            className={`${className.input} ${addClassName.input}`}
-          >
-            {/**/}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {showInputLabel ? (
+              <label
+                style={{
+                  ...style.inputLabel,
+                  ...{ width: "100%" },
+                  ...addStyle.inputLabel
+                }}
+                className={`${className.inputLabel} ${addClassName.inputLabel}`}
+              >
+                {cardExpiryLabel}
+              </label>
+            ) : (
+              ""
+            )}
+            <div
+              id="stripe-card-expiry"
+              style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
+              className={`${className.input} ${addClassName.input}`}
+            >
+              {/**/}
+            </div>
           </div>
           <div
             id="stripe-card-expiry-errors"
@@ -147,12 +240,28 @@ const Form3 = props => {
             width: "50%"
           }}
         >
-          <div
-            id="stripe-card-cvc"
-            style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
-            className={`${className.input} ${addClassName.input}`}
-          >
-            {/**/}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {showInputLabel ? (
+              <label
+                style={{
+                  ...style.inputLabel,
+                  ...{ width: "100%" },
+                  ...addStyle.inputLabel
+                }}
+                className={`${className.inputLabel} ${addClassName.inputLabel}`}
+              >
+                {cardCVCLabel}
+              </label>
+            ) : (
+              ""
+            )}
+            <div
+              id="stripe-card-cvc"
+              style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
+              className={`${className.input} ${addClassName.input}`}
+            >
+              {/**/}
+            </div>
           </div>
           <div
             id="stripe-card-cvc-errors"

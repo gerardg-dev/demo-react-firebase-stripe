@@ -5,9 +5,12 @@ import { getOrCreateCustomer } from "./customers";
 
 /**
 Attaches a payment source to a stripe customer account.
-A Stripe customer account is needed to attach a payment source.
 */
-export const attachSource = async (uid: string, source: string, billingDetails: Object) => {
+export const attachSource = async (
+  uid: string,
+  source: string,
+  billingDetails: Object
+) => {
   const customer = await getOrCreateCustomer(uid, billingDetails);
 
   let existingSource;
@@ -18,8 +21,6 @@ export const attachSource = async (uid: string, source: string, billingDetails: 
       .pop();
   }
 
-  // Check if source exists, Stripe will throw an error if we try to attach a
-  // source that already exists, thats why we create this if statement below
   if (existingSource) {
     return existingSource;
   } else {

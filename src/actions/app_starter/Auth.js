@@ -134,7 +134,6 @@ export const hideMessage = () => {
   };
 };
 
-
 export const userDoc = userDoc => {
   return {
     type: USER_DOC,

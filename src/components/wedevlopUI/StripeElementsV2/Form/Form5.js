@@ -321,29 +321,31 @@ const Form5 = props => {
         className={`${className.verticalInputSeparatorHeight} ${addClassName.verticalInputSeparatorHeight}`}
       />
 
-      {showInputLabel ? (
-        <label
-          style={{
-            ...style.inputLabe,
-            ...addStyle.inputLabel
-          }}
-          className={`${className.inputLabel} ${addClassName.inputLabel}`}
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        {showInputLabel ? (
+          <label
+            style={{
+              ...style.inputLabel,
+              ...{ width: "100%" },
+              ...addStyle.inputLabel
+            }}
+            className={`${className.inputLabel} ${addClassName.inputLabel}`}
+          >
+            {cardLabel}
+          </label>
+        ) : (
+          ""
+        )}
+        <div
+          id="card-element"
+          style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
+          className={`${className.input} ${addClassName.input}`}
         >
-          {cardLabel}
-        </label>
-      ) : (
-        ""
-      )}
-      <div
-        id="card-element"
-        style={{ ...baseInputStyle, ...style.input, ...addStyle.input }}
-        className={`${className.input} ${addClassName.input}`}
-      >
-        {/*
-					// A Stripe Element will be inserted here.
-				*/}
+          {/*
+            // A Stripe Element will be inserted here.
+          */}
+        </div>
       </div>
-
       <div
         id="card-errors"
         role="alert"

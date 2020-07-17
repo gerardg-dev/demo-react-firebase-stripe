@@ -17,9 +17,10 @@ const skStripe = `Bearer ${projectKeys.stripe.secretKey}`;
 
 export const retrieveCustomer = stripeCustomerID => {
   return async dispatch => {
-    // CURL ------------------------------------------------------------------
-    // curl https://api.stripe.com/v1/customers/cus_GF2GCpTVufHJvL \
-    //   -u sk_test_ZrRvT2I8N70Z2tVDuoPKDmS200hY41pKZk:
+    dispatch({ type: STRIPE_LOADER, payload: true });
+
+    // curl https://api.stripe.com/v1/customers/cus_xxxxxxxxxxxxx \
+    //   -u sk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:
 
     await axios
       .get(`https://api.stripe.com/v1/customers/${stripeCustomerID}`, {
@@ -44,9 +45,10 @@ export const retrieveCustomer = stripeCustomerID => {
 
 export const customerCharges = stripeCustomerID => {
   return async dispatch => {
-    // CURL ------------------------------------------------------------------
+    dispatch({ type: STRIPE_LOADER, payload: true });
+
     // curl https://api.stripe.com/v1/charges \
-    // -u sk_test_ZrRvT2I8N70Z2tVDuoPKDmS200hY41pKZk: \
+    // -u sk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: \
     // -d limit=3 \
     // -G
 
@@ -72,9 +74,10 @@ export const customerCharges = stripeCustomerID => {
 
 export const customerSubscriptions = stripeCustomerID => {
   return async dispatch => {
-    // CURL ------------------------------------------------------------------
+    dispatch({ type: STRIPE_LOADER, payload: true });
+
     // curl https://api.stripe.com/v1/subscriptions \
-    // -u sk_test_ZrRvT2I8N70Z2tVDuoPKDmS200hY41pKZk: \
+    // -u sk_test_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx: \
     // -d limit=3 \
     // -G
 
