@@ -50,6 +50,28 @@ class ExamplesWeDevlopUIStripeElements extends Component {
             <strong>DEMO</strong>
           </h1>
 
+          <div
+            style={{
+              backgroundColor: "rgba(255,255,255,1)",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              padding: "10px",
+              paddingRight: "15px",
+              borderBottomRightRadius: "300px"
+            }}
+          >
+            <a
+              style={{
+                ...styleObjects.button,
+                ...{ textDecoration: "none", color: "rgb(98,91,255)" }
+              }}
+              href={demosURLs.firebase.auth.home}
+            >
+              {"<< BACK TO AUTH"}
+            </a>
+          </div>
+
           <Heading text="REPO" />
           <Subheading text="GITHUB REPOSITORY" />
           <a

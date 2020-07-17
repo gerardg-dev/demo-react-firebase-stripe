@@ -41,9 +41,9 @@ class ExamplesFirebaseAuth extends Component {
   componentDidMount() {
     this.props.clearAuthErr();
     if (this.props.authUser !== null) {
-      this.props.history.push(
-        demosURLs.components.wedevlopUI.stripeElements.home
-      );
+      // this.props.history.push(
+      //   demosURLs.components.wedevlopUI.stripeElements.home
+      // );
     }
   }
 
@@ -54,6 +54,28 @@ class ExamplesFirebaseAuth extends Component {
           <h1 style={styleObjects.demo}>
             <strong>DEMO</strong>
           </h1>
+
+          <div
+            style={{
+              backgroundColor: "rgba(255,255,255,1)",
+              position: "absolute",
+              top: 0,
+              right: 0,
+              padding: "10px",
+              paddingLeft: "15px",
+              borderBottomLeftRadius: "300px"
+            }}
+          >
+            <a
+              style={{
+                ...styleObjects.button,
+                ...{ textDecoration: "none", color: "rgb(98,91,255)" }
+              }}
+              href={demosURLs.components.wedevlopUI.stripeElements.home}
+            >
+              {"GO TO STRIPE >>"}
+            </a>
+          </div>
 
           <Heading text="FIREBASE AUTH" />
 
@@ -70,6 +92,8 @@ class ExamplesFirebaseAuth extends Component {
               />
             </div>
           )}
+
+          {/*
 
           <Subheading text="FIREBASE AUTH USER" />
           <Body text="Preview" />
@@ -158,6 +182,8 @@ class ExamplesFirebaseAuth extends Component {
           >
             {"LOG DATA"}
           </button>
+
+          */}
 
           <Subheading text="SIGNOUT" />
           <Body text="Preview" />
